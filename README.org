@@ -11,3 +11,13 @@ I used to use [[https://ohmyz.sh/][oh-my-zsh]] but stopped because I was only us
 ~setup.org~ tries it's best to pull in everything needed for this setup. Not everything is there yet, but I hope to update it overtime.
 
 My approach to ~setup.org~ is also similar to my dotfiles. There are many different tools I could use for this, but I prefer to be simple. It's just for installing and updating, nothing more complicated than that!
+
+* Setup
+
+I use zsh and daily drive MacOS. I hope to add specific Linux support since I used to use Linux as a daily driver and will be using it on my other machines.
+
+If you'd like to use this yourself, run these commands:
+#+BEGIN_SRC sh
+git clone https://github.com/cyrialize/dotfiles.git "$HOME/Code/dotfiles"
+source $HOME/Code/dotfiles/setup.sh
+#+END_SRC
