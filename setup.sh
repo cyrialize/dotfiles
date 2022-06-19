@@ -20,5 +20,9 @@ if [[ ! -d $HOME/.config/base16-shell ]]; then
     git clone https://github.com/base16-project/base16-shell.git ~/.config/base16-shell
 fi
 
+if [[ ! -f $HOME/.gitconfig ]]; then
+    ln -s $HOME/Code/dotfiles/global_gitconfig $HOME/.gitconfig
+fi
+
 brew install fortune
 brew install cowsay
