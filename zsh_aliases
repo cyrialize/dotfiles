@@ -1,0 +1,8 @@
+# Movement
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+alias ll="ls -lAh"
+alias ls="ls -G"
