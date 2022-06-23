@@ -8,9 +8,9 @@ I currently use zsh with [[https://github.com/sindresorhus/pure][pure prompt]] a
 
 I used to use [[https://ohmyz.sh/][oh-my-zsh]] but stopped because I was only using it for prompts and themes. Making my own prompt and theme is a lot of work, so I like to pull in code for that.
 
-~setup.org~ tries it's best to pull in everything needed for this setup. Not everything is there yet, but I hope to update it overtime.
+~setup.sh~ tries it's best to pull in everything needed for this setup. Not everything is there yet, but I hope to update it overtime.
 
-My approach to ~setup.org~ is also similar to my dotfiles. There are many different tools I could use for this, but I prefer to be simple. It's just for installing and updating, nothing more complicated than that!
+My approach to ~setup.sh~ is also similar to my dotfiles. There are many different tools I could use for this, but I prefer to be simple. It's just for installing and updating, nothing more complicated than that!
 
 * Setup
 
