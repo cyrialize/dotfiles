@@ -24,5 +24,4 @@ if [[ ! -f $HOME/.gitconfig ]]; then
     ln -s $HOME/Code/dotfiles/.global_gitconfig $HOME/.gitconfig
 fi
 
-brew install fortune
-brew install cowsay
+source $HOME/Code/dotfiles/install.sh
