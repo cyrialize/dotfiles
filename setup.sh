@@ -4,7 +4,7 @@
 # Set up the symlink to my file
 # For everything else, I just use `source``
 if [[ ! -L $HOME/.zshrc ]]; then
-    ln -s $HOME/Code/dotfiles/zshrc $HOME/.zshrc
+    ln -s $HOME/Code/dotfiles/.zshrc $HOME/.zshrc
 fi
 
 # Pull in and install the pure prompt
@@ -21,7 +21,7 @@ if [[ ! -d $HOME/.config/base16-shell ]]; then
 fi
 
 if [[ ! -f $HOME/.gitconfig ]]; then
-    ln -s $HOME/Code/dotfiles/global_gitconfig $HOME/.gitconfig
+    ln -s $HOME/Code/dotfiles/.global_gitconfig $HOME/.gitconfig
 fi
 
 brew install fortune

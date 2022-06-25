@@ -3,7 +3,7 @@
 # File and dependencies to load:
 
 # zsh
-source $HOME/Code/dotfiles/zsh_aliases
+source $HOME/Code/dotfiles/.zsh_aliases
 
 # pure
 fpath+=($HOME/.zsh/pure)
