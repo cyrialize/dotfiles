@@ -1,0 +1,5 @@
+libs=(
+fortune
+cowsay
+ripgrep
+)

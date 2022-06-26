@@ -1,10 +1,6 @@
-libs=(
-fortune
-cowsay
-ripgrep
-)
+source ./libs.sh
 
-echo "Installing/Updating applications"
+echo "Installing/Updating $#libs applications"
 for lib ($libs) {
     version=$(brew ls --versions $lib)
     outdated=$(brew outdated $lib)
