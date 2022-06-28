@@ -10,6 +10,13 @@ else
     echo "Symlink $HOME/Code/dotfiles/.zshrc to $HOME/.zshrc exists"
 fi
 
+if [[ ! -f $HOME/.gitconfig ]]; then
+    echo "Symlinking $HOME/Code/dotfiles/.global_gitconfig to $HOME/.gitconfig"
+    ln -s $HOME/Code/dotfiles/.global_gitconfig $HOME/.gitconfig
+else
+    echo "Symlink $HOME/Code/dotfiles/.global_gitconfig to $HOME/.gitconfig exists"
+fi
+
 # Pull in and install the pure prompt
 # https://github.com/sindresorhus/pure
 if [[ ! -d $HOME/.zsh/pure ]]; then
@@ -18,6 +25,8 @@ if [[ ! -d $HOME/.zsh/pure ]]; then
     git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
 else
     echo "Pure prompt is already installed!"
+    echo "Updating..."
+    git -C $HOME/.zsh/pure pull
 fi
 
 # Pull in and install the base16 shell theme
@@ -27,13 +36,8 @@ if [[ ! -d $HOME/.config/base16-shell ]]; then
     git clone https://github.com/base16-project/base16-shell.git ~/.config/base16-shell
 else
     echo "base16 shell themes are already installed!"
+    echo "Updating..."
+    git -C $HOME/.config/base16-shell pull
 fi
 
-if [[ ! -f $HOME/.gitconfig ]]; then
-    echo "Symlinking $HOME/Code/dotfiles/.global_gitconfig to $HOME/.gitconfig"
-    ln -s $HOME/Code/dotfiles/.global_gitconfig $HOME/.gitconfig
-else
-    echo "Symlink $HOME/Code/dotfiles/.global_gitconfig to $HOME/.gitconfig exists"
-fi
-
-source ./install.sh
+source $HOME/Code/dotfiles/install.sh

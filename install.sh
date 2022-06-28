@@ -1,4 +1,4 @@
-source ./libs.sh
+source $HOME/Code/dotfiles/libs.sh
 
 echo "Installing/Updating $#libs applications"
 for lib ($libs) {
