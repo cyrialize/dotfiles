@@ -1,5 +1,14 @@
+#!/bin/zsh
+#
 # Setup script for setting up my dotfiles
 # Meant for MacOS or Linux
+
+if command sw_vers > /dev/null; then
+    echo "On MacOS!"
+else
+    echo "Other OS's aren't supported!"
+    exit 1
+fi
 
 # Set up the symlink to my file
 # For everything else, I just use `source`

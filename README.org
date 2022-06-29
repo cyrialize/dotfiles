@@ -34,5 +34,6 @@ I use zsh and daily drive MacOS. I hope to add specific Linux support since I us
 If you'd like to use this yourself, run these commands:
 #+BEGIN_SRC sh
 git clone https://github.com/cyrialize/dotfiles.git "$HOME/Code/dotfiles"
-source $HOME/Code/dotfiles/setup.sh
+chmod +x $HOME/Code/dotfiles/setup.sh
+$HOME/Code/dotfiles/setup.sh
 #+END_SRC
