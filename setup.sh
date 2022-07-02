@@ -3,6 +3,29 @@
 # Setup script for setting up my dotfiles
 # Meant for MacOS or Linux
 
+help=$(cat <<EOF
+Usage:
+--i Run install.sh to install/update libs
+--h See this message.
+EOF
+)
+install=1
+while getopts 'ih' OPTION; do
+    case "$OPTION" in
+	i)
+	    install=0
+	    ;;
+	h)
+	    echo $help
+	    exit 0
+	    ;;
+	?)
+	    echo $help
+	    exit 1
+	    ;;
+    esac
+done
+
 if command sw_vers > /dev/null; then
     echo "On MacOS!"
 else
@@ -49,4 +72,6 @@ else
     git -C $HOME/.config/base16-shell pull
 fi
 
-source $HOME/Code/dotfiles/install.sh
+if [[ $install -eq 0 ]]; then
+   source $HOME/Code/dotfiles/install.sh
+fi
