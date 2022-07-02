@@ -4,6 +4,11 @@
 # Meant for MacOS or Linux
 
 help=$(cat <<EOF
+Setup script for setting up my dotfiles. Intended for MacOS. Linux
+support planned in the future.
+
+Checks for OS, symlinks, and base styling packages prior to flags.
+
 Usage:
 --i Run install.sh to install/update libs
 --h See this message.
