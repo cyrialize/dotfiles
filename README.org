@@ -11,23 +11,6 @@ I used to use [[https://ohmyz.sh/][oh-my-zsh]] but stopped because I was only us
 
 My approach to ~setup.sh~ is also similar to my dotfiles. There are many different tools I could use for this, but I prefer to be simple. It's just for installing and updating, nothing more complicated than that!
 
-** Example Output
-#+BEGIN_SRC sh
-❯ source $HOME/Code/dotfiles/setup.sh
-Symlink /Users/jonny/Code/dotfiles/.zshrc to /Users/jonny/.zshrc exists
-Symlink /Users/jonny/Code/dotfiles/.global_gitconfig to /Users/jonny/.gitconfig exists
-Pure prompt is already installed!
-Updating...
-Already up to date.
-base16 shell themes are already installed!
-Updating...
-Already up to date.
-Installing/Updating 3 applications
-Already installed: fortune 9708
-Already installed: cowsay 3.04_1
-Already installed: ripgrep 13.0.0
-#+END_SRC
-
 * Setup
 I use zsh and daily drive MacOS. I hope to add specific Linux support since I used to use Linux as a daily driver and will be using it on my other machines.
 
@@ -36,4 +19,44 @@ If you'd like to use this yourself, run these commands:
 git clone https://github.com/cyrialize/dotfiles.git "$HOME/Code/dotfiles"
 chmod +x $HOME/Code/dotfiles/setup.sh
 $HOME/Code/dotfiles/setup.sh
+#+END_SRC
+
+* Usage
+#+BEGIN_SRC sh
+❯ ./setup.sh -h
+Setup script for setting up my dotfiles. Intended for MacOS. Linux
+support planned in the future.
+
+Checks for OS, symlinks, and base styling packages prior to flags.
+
+Usage:
+--i Run install.sh to install/update libs
+--h See this message.
+#+END_SRC
+
+** Example Output
+#+BEGIN_SRC sh
+❯ ./setup.sh -i
+On MacOS!
+Symlink /Users/jonny/Code/dotfiles/.zshrc to /Users/jonny/.zshrc exists
+Symlink /Users/jonny/Code/dotfiles/.global_gitconfig to /Users/jonny/.gitconfig exists
+Pure prompt is already installed!
+Updating...
+Already up to date.
+base16 shell themes are already installed!
+Updating...
+Already up to date.
+Installing/Updating 4 applications
+----------
+Already installed: fortune
+Version: fortune 9708
+----------
+Already installed: cowsay
+Version: cowsay 3.04_1
+----------
+Already installed: ripgrep
+Version: ripgrep 13.0.0
+----------
+Already installed: font-hack
+----------
 #+END_SRC
