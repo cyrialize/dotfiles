@@ -22,7 +22,7 @@ $HOME/Code/dotfiles/setup.sh
 #+END_SRC
 
 * Usage
-#+BEGIN_SRC sh
+#+BEGIN_SRC
 ❯ ./setup.sh -h
 Setup script for setting up my dotfiles. Intended for MacOS. Linux
 support planned in the future.
@@ -35,7 +35,7 @@ Usage:
 #+END_SRC
 
 ** Example Output
-#+BEGIN_SRC sh
+#+BEGIN_SRC
 ❯ ./setup.sh -i
 On MacOS!
 Symlink /Users/jonny/Code/dotfiles/.zshrc to /Users/jonny/.zshrc exists
