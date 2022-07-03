@@ -3,4 +3,5 @@ fortune
 cowsay
 ripgrep
 font-hack
+ispell
 )
