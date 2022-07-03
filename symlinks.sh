@@ -1,13 +1,14 @@
-if [[ ! -L $HOME/.zshrc ]]; then
-    echo "Symlinking $HOME/Code/dotfiles/.zshrc to $HOME/.zshrc"
-    ln -s $HOME/Code/dotfiles/.zshrc $HOME/.zshrc
-else
-    echo "Symlink $HOME/Code/dotfiles/.zshrc to $HOME/.zshrc exists"
-fi
+links=(
+    $HOME/Code/dotfiles/.zshrc $HOME/.zshrc
+    $HOME/Code/dotfiles/.global_gitconfig $HOME/.gitconfig
+)
 
-if [[ ! -f $HOME/.gitconfig ]]; then
-    echo "Symlinking $HOME/Code/dotfiles/.global_gitconfig to $HOME/.gitconfig"
-    ln -s $HOME/Code/dotfiles/.global_gitconfig $HOME/.gitconfig
-else
-    echo "Symlink $HOME/Code/dotfiles/.global_gitconfig to $HOME/.gitconfig exists"
-fi
+# Don't use $path, or you'll mess with ZSH
+for lpath link (${(kv)links}) {
+    if [[ ! -L $link ]]; then
+	echo "Symlinking $lpath to $link"
+	ln -s "$lpath" "$link"
+    else
+	echo "Symlink $lpath to $link exists"
+    fi
+}
