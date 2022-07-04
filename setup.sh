@@ -41,8 +41,13 @@ while getopts 'alih' OPTION; do
     esac
 done
 
+if [[ -z $OPTION ]]; then
+    echo $help
+    exit 0
+fi
+
 if command sw_vers > /dev/null; then
-    echo "On MacOS!"
+    echo "MacOS detected! Continuing..."
 else
     echo "Other OS's aren't supported!"
     exit 1
