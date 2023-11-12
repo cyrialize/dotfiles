@@ -4,4 +4,6 @@ cowsay
 ripgrep
 font-hack
 ispell
+elixir
+go
 )
