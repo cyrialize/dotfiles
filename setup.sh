@@ -3,6 +3,8 @@
 # Setup script for setting up my dotfiles
 # Meant for MacOS or Linux
 
+source $HOME/Code/dotfiles/helpers.sh
+
 help=$(cat <<EOF
 Setup script for setting up my dotfiles. Intended for MacOS. Linux
 support planned in the future.
@@ -21,23 +23,23 @@ all=1
 link=1
 while getopts 'alih' OPTION; do
     case "$OPTION" in
-	a)
-	    all=0
-	    ;;
-	l)
-	    link=0
-	    ;;
-	i)
-	    install=0
-	    ;;
-	h)
-	    echo $help
-	    exit 0
-	    ;;
-	?)
-	    echo $help
-	    exit 1
-	    ;;
+    a)
+        all=0
+        ;;
+    l)
+        link=0
+        ;;
+    i)
+        install=0
+        ;;
+    h)
+        echo $help
+        exit 0
+        ;;
+    ?)
+        echo $help
+        exit 1
+        ;;
     esac
 done
 
@@ -46,11 +48,8 @@ if [[ -z $OPTION ]]; then
     exit 0
 fi
 
-if command sw_vers > /dev/null; then
-    echo "MacOS detected! Continuing..."
-else
-    echo "Other OS's aren't supported!"
-    exit 1
+if [[ "$(current_os)" == "mac" ]]; then
+    print_color "yellow" "MacOS detected! Continuing..."
 fi
 
 if [[ $link -eq 0 || $all -eq 0 ]]; then

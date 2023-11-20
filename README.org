@@ -10,7 +10,10 @@ I used to use [[https://ohmyz.sh/][oh-my-zsh]] but stopped because I was only us
 ~setup.sh~ tries it's best to pull in everything needed for this setup. Not everything is there yet, but I hope to update it overtime.
 
 My approach to ~setup.sh~ is also similar to my dotfiles. There are many different tools I could use for this, but I prefer to be simple. It's just for installing and updating, nothing more complicated than that!
-
+* Resources
+Here are some resources that I reference while working on my dotfiles:
+- https://zsh.sourceforge.io/
+- https://github.com/zsh-users
 * Setup
 I use zsh and daily drive MacOS. I hope to add specific Linux support since I used to use Linux as a daily driver and will be using it on my other machines.
 
