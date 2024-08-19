@@ -1,6 +1,6 @@
-#!/bin/zsh
+#!/usr/bin/env bash
 
-source $HOME/Code/dotfiles/functions.sh
+source $HOME/Code/dotfiles/lib/functions.sh
 
 # --------------------------------
 # GENERAL HELPER INSTALL FUNCTIONS
@@ -88,7 +88,7 @@ is_up_to_date() {
 # ------------------------------------
 #
 # Specific implementations of the general functions above for MacOS.
-# Currenly only implements homebrew commands. If there is ever a need
+# Currently only implements homebrew commands. If there is ever a need
 # to move away from homebrew, then I'll change these.
 
 # $1: Name of the package
@@ -127,7 +127,7 @@ mac_update() {
 #
 # Ex: mac_lib_version "lib"
 mac_lib_version() {
-    echo $(brew ls --version "$1")
+    echo "$(brew ls --version "$1")"
 }
 
 # ----------------------------

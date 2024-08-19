@@ -21,6 +21,9 @@ base16_tomorrow-night-eighties
 source $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh
 source $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh
 
+# clamscan
+export PATH=/usr/local/clamav/bin:/usr/local/clamav/sbin:$PATH
+
 # Run on terminal startup:
 
 fortune | cowsay
