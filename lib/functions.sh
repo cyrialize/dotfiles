@@ -1,4 +1,7 @@
-#!/bin/zsh
+#!/usr/bin/env bash
+
+# shellcheck source=colors.sh
+source $HOME/Code/dotfiles/lib/colors.sh
 
 # General functions used in a variety of my scripts and shell.
 
@@ -22,12 +25,13 @@ current_os() {
 # $1: color
 # $2: message
 #
-# Ex: print_color "yellow" "Installing pure prompt"
+# Ex: print_color "YELLOW" "Installing pure prompt"
 print_color() {
-    local color="$1"
+    local color=""
+    color=$(echo "$1" | tr '[:lower:]' '[:upper:]')
     local string="$2"
 
-    print -P "%F{$color}$2%f"
+    echo -e "${!color}${string}${NOCOLOR}"
 }
 
 # Prints out a message a successful message in green if the command

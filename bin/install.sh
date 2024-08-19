@@ -1,7 +1,7 @@
-#!/bin/zsh
+#!/usr/bin/env bash
 
-source $HOME/Code/dotfiles/helpers.sh
-source $HOME/Code/dotfiles/libs.sh
+source $HOME/Code/dotfiles/lib/helpers.sh
+source $HOME/Code/dotfiles/lib/libs.sh
 
 # Pull in and install the pure prompt
 # https://github.com/sindresorhus/pure
@@ -30,8 +30,9 @@ else
 fi
 echo
 
-print_color "yellow" "Installing/Updating $#libs applications"
-for lib in $libs; do
+# shellcheck disable=SC2154
+print_color "yellow" "Installing/Updating ${#libs[@]} libs applications"
+for lib in "${libs[@]}"; do
     if is_installed "$lib"; then
         if is_up_to_date "$lib"; then
             current_version=$(version "$lib")

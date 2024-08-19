@@ -3,17 +3,38 @@ My personal dotfiles.
 
 I aim to be as lean and straightforward as possible.
 
-I currently use zsh with [[https://github.com/sindresorhus/pure][pure prompt]] and [[https://github.com/base16-project/base16-shell][base16 shell themes]].
+I currently use ~zsh~ with [[https://github.com/sindresorhus/pure][pure prompt]] and [[https://github.com/base16-project/base16-shell][base16 shell themes]].
+
+The scripts themselves are written in ~bash~. There isn't a huge difference between programming in ~bash~ and ~zsh~, but I prefer ~bash~ just to make sure it is more universal.
 
 I used to use [[https://ohmyz.sh/][oh-my-zsh]] but stopped because I was only using it for prompts and themes. Making my own prompt and theme is a lot of work, so I like to pull in code for that.
 
 ~setup.sh~ tries it's best to pull in everything needed for this setup. Not everything is there yet, but I hope to update it overtime.
 
 My approach to ~setup.sh~ is also similar to my dotfiles. There are many different tools I could use for this, but I prefer to be simple. It's just for installing and updating, nothing more complicated than that!
+
 * Resources
 Here are some resources that I reference while working on my dotfiles:
 - https://zsh.sourceforge.io/
 - https://github.com/zsh-users
+- https://github.com/bash-lsp/bash-language-server
+- https://www.shellcheck.net
+- https://www.shellscript.sh/
+- https://linuxconfig.org/bash-script-flags-usage-with-arguments-examples
+- https://learnxinyminutes.com/docs/bash/
+- https://mywiki.wooledge.org/BashGuide
+  - Here's an updated version of the above: https://guide.bash.academy/
+- https://www.gnu.org/software/bash/manual/bash.html
+
+** Template related resources
+These are resources that I reference in the ~lib/project_templates~ folder.
+
+*** Ruby
+- https://bundler.io/
+- https://github.com/postmodern/chruby
+
+*** Python
+- https://rye.astral.sh/
 * Setup
 I use zsh and daily drive MacOS. I hope to add specific Linux support since I used to use Linux as a daily driver and will be using it on my other machines.
 
@@ -39,29 +60,11 @@ Usage:
 --h See this message.
 #+END_SRC
 
-** Example Output
 #+BEGIN_SRC
-❯ ./setup.sh -a
-On MacOS!
-Symlink /Users/jonny/Code/dotfiles/.zshrc to /Users/jonny/.zshrc exists
-Symlink /Users/jonny/Code/dotfiles/.global_gitconfig to /Users/jonny/.gitconfig exists
-Pure prompt is already installed!
-Updating...
-Already up to date.
-base16 shell themes are already installed!
-Updating...
-Already up to date.
-Installing/Updating 4 applications
-----------
-Already installed: fortune
-Version: fortune 9708
-----------
-Already installed: cowsay
-Version: cowsay 3.04_1
-----------
-Already installed: ripgrep
-Version: ripgrep 13.0.0
-----------
-Already installed: font-hack
-----------
+❯ ./bin/new_project.sh -h
+Sets up a new project based on templates in "project_templates".
+
+Usage:
+-c project choice, matches a folder name in "project_templates"
+-p path to set up project
 #+END_SRC
