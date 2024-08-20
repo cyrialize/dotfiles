@@ -68,3 +68,7 @@ Usage:
 -c project choice, matches a folder name in "project_templates"
 -p path to set up project
 #+END_SRC
+
+* To Dos
+- [ ] Add a githook to run shellcheck on commit and fail if there are errors
+- [ ] Work on providing linux support 

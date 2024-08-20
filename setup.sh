@@ -1,11 +1,7 @@
 #!/usr/bin/env bash
-#
+
 # Setup script for setting up my dotfiles
 # Meant for MacOS or Linux
-
-# TODO: add a githook to run shellcheck and fail if there are errors
-# TODO: add a githook to always convert to spaces and CLRF
-# TODO: add a githook to always add newline at end of file
 
 # shellcheck source=helpers.sh
 source $HOME/Code/dotfiles/lib/helpers.sh
