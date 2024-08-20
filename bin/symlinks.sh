@@ -6,6 +6,7 @@ declare -A links
 links["$HOME/.zshrc"]="$HOME/Code/dotfiles/.zshrc"
 links["$HOME/.gitconfig"]="$HOME/Code/dotfiles/.global_gitconfig"
 links["$HOME/.zsh_aliases"]="$HOME/Code/dotfiles/.zsh_aliases"
+links["$HOME/.global_gitattributes"]="$HOME/Code/dotfiles/.global_gitattributes"
 
 for link in "${!links[@]}"; do
   lpath="${links[$link]}"

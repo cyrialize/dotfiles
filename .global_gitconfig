@@ -1,4 +1,7 @@
 [user]
-name = Jonny Cyr
-email = jonathancyr@fastmail.com
-username = Cyrialize
+  name = Jonny Cyr
+  email = jonathancyr@fastmail.com
+  username = Cyrialize
+[core]
+	autocrlf = input
+	attributesfile = /Users/jonny/.global_gitattributes
