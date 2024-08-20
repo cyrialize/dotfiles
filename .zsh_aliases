@@ -4,5 +4,15 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
+
+# Listing
 alias ll="ls -lAh"
 alias ls="ls -G"
+
+# Useful Command Shortcuts
+
+# Call shellcheck recursively on all commands in file
+alias cdsh="find . -iname '*.sh' -exec shellcheck {} \;"
+
+# Shortcut to the new_project.sh tool
+alias np="$HOME/Code/dotfiles/bin/new_project.sh"
