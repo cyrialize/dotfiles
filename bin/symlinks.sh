@@ -7,6 +7,9 @@ links["$HOME/.zshrc"]="$HOME/Code/dotfiles/.zshrc"
 links["$HOME/.gitconfig"]="$HOME/Code/dotfiles/.global_gitconfig"
 links["$HOME/.zsh_aliases"]="$HOME/Code/dotfiles/.zsh_aliases"
 links["$HOME/.global_gitattributes"]="$HOME/Code/dotfiles/.global_gitattributes"
+links["$HOME/.wezterm.lua"]="$HOME/Code/dotfiles/.wezterm.lua"
+links["$HOME/.config/wezterm/.wezterm.lua"]="$HOME/Code/dotfiles/.wezterm.lua"
+links["$HOME/Code/dotfiles/.git/hooks/pre-commit.sh"]="$HOME/Code/dotfiles/lib/hooks/pre-commit.sh"
 
 for link in "${!links[@]}"; do
   lpath="${links[$link]}"

@@ -14,7 +14,8 @@ Checks for OS support prior to running anything.
 
 Usage:
 -a Run all flags.
--i Run install.sh to install/update libs, pure, and base16-shell.
+-i Run install.sh to install/update libs and pure
+-e Make files in bin, and lib/hooks executable
 -l Connect symlinks.
 -h See this message.
 EOF
@@ -23,8 +24,9 @@ EOF
 install=1
 all=1
 link=1
+executable=1
 
-while getopts 'alih' OPTION; do
+while getopts 'alieh' OPTION; do
     case "$OPTION" in
     a)
         all=0
@@ -34,6 +36,9 @@ while getopts 'alih' OPTION; do
         ;;
     i)
         install=0
+        ;;
+    e)
+        executable=0
         ;;
     h)
         echo "$help"
@@ -74,15 +79,20 @@ if [[ "$(current_os)" == "mac" ]]; then
     fi
 fi
 
-for script in bin/*; do
-  if [ -x "$script" ]; then
-    print_color "blue" "$script is executable"
-  else
-    print_color "blue" "$script is not executable, will make it executable..."
-    chmod a+x "$script"
-    log_result "Ran chmod a+x"
-  fi
-done
+if [[ $executable -eq 0 ]]; then
+  executableDirs=("bin" "lib/hooks")
+  for dir in "${executableDirs[@]}"; do
+    for script in "$dir"/*; do
+      if [ -x "$script" ]; then
+        print_color "blue" "$script is executable"
+      else
+        print_color "blue" "$script is not executable, will make it executable..."
+        chmod a+x "$script"
+        log_result "Ran chmod a+x"
+      fi
+    done
+  done
+fi
 
 if [[ $link -eq 0 || $all -eq 0 ]]; then
     source $HOME/Code/dotfiles/bin/symlinks.sh

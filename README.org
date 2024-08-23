@@ -3,7 +3,7 @@ My personal dotfiles.
 
 I aim to be as lean and straightforward as possible.
 
-I currently use ~zsh~ with [[https://github.com/sindresorhus/pure][pure prompt]] and [[https://github.com/base16-project/base16-shell][base16 shell themes]].
+I currently use ~zsh~ with [[https://github.com/sindresorhus/pure][pure prompt]]. My terminal emulators are [[https://iterm2.com/][iTerm2]] and [[https://wezfurlong.org/wezterm/][WezTerm]].
 
 The scripts themselves are written in ~bash~. There isn't a huge difference between programming in ~bash~ and ~zsh~, but I prefer ~bash~ just to make sure it is more universal.
 
@@ -71,4 +71,7 @@ Usage:
 
 * To Dos
 - [ ] Add a githook to run shellcheck on commit and fail if there are errors
-- [ ] Work on providing linux support 
+- [ ] Work on providing linux support
+- [ ] Create a library of git hooks, and use those to help create git hooks for new projects
+  - For example, a ~ruby-hooks-pre-commit.sh~ file and put it into ~pre-commit.sh~ for ~ruby~ template
+- [ ] Bring hammerspoon scripts here

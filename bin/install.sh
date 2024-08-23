@@ -17,19 +17,6 @@ else
 fi
 echo
 
-# Pull in and install the base16 shell theme
-# https://github.com/base16-project/base16-shell
-if [[ ! -d $HOME/.config/base16-shell ]]; then
-    print_color "yellow" "Installing base16 shell themes..."
-    git clone https://github.com/base16-project/base16-shell.git ~/.config/base16-shell
-    log_result "Installation" "$?"
-else
-    print_color "yellow" "base16 shell themes are already installed!"
-    print_color "yellow" "Updating..."
-    git_attempt_update "$HOME/.config/base16-shell"
-fi
-echo
-
 # shellcheck disable=SC2154
 print_color "yellow" "Installing/Updating ${#libs[@]} libs applications"
 for lib in "${libs[@]}"; do

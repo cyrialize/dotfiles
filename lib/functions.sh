@@ -49,7 +49,7 @@ log_result() {
     local action="$1"
     local result="$2"
 
-    if [ $result -eq 0 ]; then
+    if [[ "$result" -eq 0 ]]; then
         print_color "green" "$action succeeded!"
     else
         print_color "red" "$action failed!"

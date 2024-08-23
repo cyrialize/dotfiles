@@ -1,0 +1,38 @@
+* Graveyard
+Here are a collection of scripts and snippets that used to be part of my files. I couldn't think of a good place to put them.
+
+I didn't want to have a separate file I wouldn't use, nor a configuration file with flags.
+
+So here they are!
+
+* Base16 Shell
+
+This was my previous set up for a theme, using https://github.com/chriskempson/base16-shell.
+
+This has since been replaced with WezTerm and theme configurations in WezTerm.
+
+This used to be part of my ~.zshrc~.
+#+BEGIN_SRC sh
+# Base16 Shell
+BASE16_SHELL_PATH="$HOME/.config/base16-shell"
+[ -n "$PS1" ] && \
+  [ -s "$BASE16_SHELL_PATH/profile_helper.sh" ] && \
+    source "$BASE16_SHELL_PATH/profile_helper.sh"
+base16_tomorrow-night-eighties
+#+END_SRC
+
+This used to be part of my ~bin/install.sh~ file:
+#+BEGIN_SRC sh
+# Pull in and install the base16 shell theme
+# https://github.com/base16-project/base16-shell
+if [[ ! -d $HOME/.config/base16-shell ]]; then
+    print_color "yellow" "Installing base16 shell themes..."
+    git clone https://github.com/base16-project/base16-shell.git ~/.config/base16-shell
+    log_result "Installation" "$?"
+else
+    print_color "yellow" "base16 shell themes are already installed!"
+    print_color "yellow" "Updating..."
+    git_attempt_update "$HOME/.config/base16-shell"
+fi
+echo
+#+END_SRC
