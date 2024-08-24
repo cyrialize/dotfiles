@@ -7,6 +7,8 @@ The scripts themselves are written in ~bash~. There isn't a huge difference betw
 
 ~setup.sh~ is my main script - it tries it's best to pull in everything needed for this setup. There are other scripts, feel free to go through the repo!
 
+Previous scripts and snippets I've used can be found in ~GRAVEYARD.org~.
+
 * Resources
 Here are some resources that I reference while working on my dotfiles:
 
