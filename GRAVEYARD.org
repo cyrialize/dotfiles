@@ -5,7 +5,7 @@ I didn't want to have a separate file I wouldn't use, nor a configuration file w
 
 So here they are!
 
-* Base16 Shell
+** Base16 Shell
 
 This was my previous set up for a theme, using https://github.com/chriskempson/base16-shell.
 

@@ -3,8 +3,8 @@
 # Setup script for setting up my dotfiles
 # Meant for MacOS or Linux
 
-# shellcheck source=helpers.sh
-source $HOME/Code/dotfiles/lib/helpers.sh
+# shellcheck source=lib/helpers.sh
+source "$HOME"/Code/dotfiles/lib/helpers.sh
 
 help=$(cat <<EOF
 Setup script for setting up my dotfiles. Intended for MacOS. Linux
@@ -59,7 +59,7 @@ fi
 if [[ "$(current_os)" == "mac" ]]; then
     print_color "yellow" "MacOS detected! Continuing..."
     which -s brew
-    if [[ $? != 0 ]] ; then
+    if ! which -s brew; then
       print_color "red" "Homebrew is not installed, install it first!"
       exit 1
     fi
@@ -79,7 +79,7 @@ if [[ "$(current_os)" == "mac" ]]; then
     fi
 fi
 
-if [[ $executable -eq 0 ]]; then
+if [[ $executable -eq 0 || $all -eq 0 ]]; then
   executableDirs=("bin" "lib/hooks")
   for dir in "${executableDirs[@]}"; do
     for script in "$dir"/*; do
@@ -95,9 +95,9 @@ if [[ $executable -eq 0 ]]; then
 fi
 
 if [[ $link -eq 0 || $all -eq 0 ]]; then
-    source $HOME/Code/dotfiles/bin/symlinks.sh
+    source "$HOME"/Code/dotfiles/bin/symlinks.sh
 fi
 
 if [[ $install -eq 0 || $all -eq 0 ]]; then
-    source $HOME/Code/dotfiles/bin/install.sh
+    source "$HOME"/Code/dotfiles/bin/install.sh
 fi

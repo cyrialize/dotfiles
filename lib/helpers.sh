@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-source $HOME/Code/dotfiles/lib/functions.sh
+# shellcheck source=lib/functions.sh
+source "$HOME"/Code/dotfiles/lib/functions.sh
 
 # --------------------------------
 # GENERAL HELPER INSTALL FUNCTIONS
@@ -106,7 +107,6 @@ mac_is_installed() {
 # Ex: mac_is_outdated "lib"
 mac_is_up_to_date() {
     brew outdated "$1" > /dev/null 2>&1
-    [[ $? -eq 0 ]]
 }
 
 
@@ -127,7 +127,7 @@ mac_update() {
 #
 # Ex: mac_lib_version "lib"
 mac_lib_version() {
-    echo "$(brew ls --version "$1")"
+    brew ls --version "$1"
 }
 
 # ----------------------------
@@ -144,12 +144,12 @@ mac_lib_version() {
 # returns: 0 if update was a success, 1 if the update failed,
 #          2 if the package was already up to date
 git_attempt_update() {
-    local update_output=$(git -C "$1" pull)
+    update_output=$(git -C "$1" pull)
 
     if [[ $update_output == *"Already up to date"* ]]; then
         print_color "yellow" "Already up to date!"
         return 2
-    elif [[ $? -eq 0 ]]; then
+    elif [[ $update_output -eq 0 ]]; then
         print_color "green" "Git pull succeeded!"
         return 0
     else

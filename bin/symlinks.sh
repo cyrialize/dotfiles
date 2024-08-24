@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-source $HOME/Code/dotfiles/lib/functions.sh
+# shellcheck source=lib/functions.sh
+source "$HOME"/Code/dotfiles/lib/functions.sh
 
 declare -A links
 links["$HOME/.zshrc"]="$HOME/Code/dotfiles/.zshrc"
@@ -10,6 +11,7 @@ links["$HOME/.global_gitattributes"]="$HOME/Code/dotfiles/.global_gitattributes"
 links["$HOME/.wezterm.lua"]="$HOME/Code/dotfiles/.wezterm.lua"
 links["$HOME/.config/wezterm/.wezterm.lua"]="$HOME/Code/dotfiles/.wezterm.lua"
 links["$HOME/Code/dotfiles/.git/hooks/pre-commit"]="$HOME/Code/dotfiles/lib/hooks/pre-commit.sh"
+links["$HOME/.shellcheckrc"]="$HOME/Code/dotfiles/.shellcheckrc"
 
 for link in "${!links[@]}"; do
   lpath="${links[$link]}"

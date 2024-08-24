@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-source $HOME/Code/dotfiles/lib/helpers.sh
-source $HOME/Code/dotfiles/lib/libs.sh
+# shellcheck source=lib/helpers.sh
+source "$HOME"/Code/dotfiles/lib/helpers.sh
+
+# shellcheck source=lib/libs.sh
+source "$HOME"/Code/dotfiles/lib/libs.sh
 
 # Pull in and install the pure prompt
 # https://github.com/sindresorhus/pure

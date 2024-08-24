@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# shellcheck source=colors.sh
-source $HOME/Code/dotfiles/lib/colors.sh
+# shellcheck source=lib/colors.sh
+source "$HOME"/Code/dotfiles/lib/colors.sh
 
 # General functions used in a variety of my scripts and shell.
 

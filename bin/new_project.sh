@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-source $HOME/Code/dotfiles/lib/functions.sh
+# shellcheck source=lib/functions.sh
+source "$HOME"/Code/dotfiles/lib/functions.sh
 
 shopt -s nullglob
 
@@ -31,7 +32,7 @@ while getopts 'hc:p:' OPTION; do
       ;;
   esac
 done
-shift "$(($OPTIND -1))"
+shift "$((OPTIND -1))"
 
 if [[ -z "$language" || -z "$path" ]]; then
   echo "$help"
@@ -40,19 +41,19 @@ fi
 
 templates=()
 langs=()
-for dir in $HOME/Code/dotfiles/lib/project_templates/*; do
+for dir in "$HOME"/Code/dotfiles/lib/project_templates/*; do
   templates+=("$dir")
-  langs+=("$(basename $dir)")
+  langs+=("$(basename "$dir")")
 done
 
 found=0
 chosenTemplate=""
 chosenLang=""
 for dir in "${templates[@]}"; do
-  if [[ "$(basename $dir)" == "$language" ]]; then
+  if [[ "$(basename "$dir")" == "$language" ]]; then
     found=1
     chosenTemplate=$dir
-    chosenLang=$(basename $dir)
+    chosenLang=$(basename "$dir")
     break
   fi
 done
@@ -60,7 +61,7 @@ done
 if [[ $found -eq 0 ]]; then
   print_color "red" "$language does not have a template, current templates are:"
   for template in "${templates[@]}"; do
-    echo $template
+    echo "$template"
   done
   exit 1
 fi
@@ -84,24 +85,24 @@ echo "Install Path:   $path"
 echo "-------------------------------------------------------------------------"
 echo
 echo "continue?(y/n)"
-read continue
+read -r continue
 
 if [[ "$continue" != "y" ]]; then
   exit 0
 fi
 
 print_color "yellow" "Attempting to create directory $path"
-mkdir $path
+mkdir "$path"
 log_result "Creating $path" "$?"
 echo
 
 print_color "yellow" "Attempting to copy $chosenTemplate into $path"
-cp -r $chosenTemplate/. $path/
+cp -r "$chosenTemplate"/. "$path"/
 log_result "Copied $chosenTemplate into $path!" "$?"
 echo
 
 if [[ -e "$path" ]]; then
   print_color "green" "Successfully copied $chosenTemplate into $path"
-  ls -la $path
+  ls -la "$path"
   echo
 fi
