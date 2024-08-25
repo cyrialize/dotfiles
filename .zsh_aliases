@@ -16,3 +16,9 @@ alias cdsh="find . -name '*.sh' -exec shellcheck {} +"
 
 # Shortcut to the new_project.sh tool
 alias np="$HOME/Code/dotfiles/bin/new_project.sh"
+
+# Reload my zsh files
+alias reload="source $HOME/.zshrc; source $HOME/.zsh_aliases"
+
+# https://github.com/chubin/wttr.in
+alias weather="curl wttr.in"
