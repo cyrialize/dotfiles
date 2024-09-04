@@ -17,6 +17,9 @@ source $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh
 # clamscan
 export PATH=/usr/local/clamav/bin:/usr/local/clamav/sbin:$PATH
 
+# brew
+export HOMEBREW_BUNDLE_FILE_GLOBAL=$HOME/.brewfile
+
 # Run on terminal startup:
 
-fortune | cowsay
+fortune | cowsay -f small

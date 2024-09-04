@@ -82,3 +82,7 @@ I want to have a directory/snippet of ~git~ hooks that can be pulled into projec
 ** Hammerspoon Scripts
 
 I've played around with Hammerspoon a bit for MacOS automation. I should bring the scripts in here!
+
+** Set up editorconfig support
+
+I switch around with different editors often, using ~.editorconfig~ would make that easier: https://editorconfig.org/
