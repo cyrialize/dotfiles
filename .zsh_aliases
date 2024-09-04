@@ -14,8 +14,9 @@ alias ls="ls -G"
 # Call shellcheck recursively on all commands in current directory
 alias cdsh="find . -name '*.sh' -exec shellcheck {} +"
 
-# Shortcut to the new_project.sh tool
+# Shortcuts to tools
 alias np="$HOME/Code/dotfiles/bin/new_project.sh"
+alias symlink="$HOME/Code/dotfiles/setup.sh -l"
 
 # Reload my zsh files
 alias reload="source $HOME/.zshrc; source $HOME/.zsh_aliases"

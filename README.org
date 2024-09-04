@@ -86,3 +86,7 @@ I've played around with Hammerspoon a bit for MacOS automation. I should bring t
 ** Set up editorconfig support
 
 I switch around with different editors often, using ~.editorconfig~ would make that easier: https://editorconfig.org/
+
+** Switch to full Brewfile support
+
+I have a ~.brewfile~, but I want to update my install script to use it (if on mac), and I want to put my ~.brewfile.lock~ under version control.

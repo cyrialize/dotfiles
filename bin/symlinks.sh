@@ -13,6 +13,7 @@ links["$HOME/.config/wezterm/.wezterm.lua"]="$HOME/Code/dotfiles/.wezterm.lua"
 links["$HOME/Code/dotfiles/.git/hooks/pre-commit"]="$HOME/Code/dotfiles/lib/hooks/pre-commit.sh"
 links["$HOME/.shellcheckrc"]="$HOME/Code/dotfiles/.shellcheckrc"
 links["$HOME/.brewfile"]="$HOME/Code/dotfiles/.brewfile"
+links["$HOME/.brewfile.lock.json"]="$HOME/Code/dotfiles/.brewfile.lock.json"
 
 for link in "${!links[@]}"; do
   lpath="${links[$link]}"
