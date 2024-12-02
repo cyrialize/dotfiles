@@ -20,6 +20,9 @@ export PATH=/usr/local/clamav/bin:/usr/local/clamav/sbin:$PATH
 # brew
 export HOMEBREW_BUNDLE_FILE_GLOBAL=$HOME/.brewfile
 
+# solargraph (ruby LSP)
+export PATH=$HOME/.gem/ruby/3.3.5/bin/solargraph:$PATH
+
 # Run on terminal startup:
 
 fortune | cowsay -f small

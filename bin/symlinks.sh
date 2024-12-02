@@ -14,6 +14,7 @@ links["$HOME/Code/dotfiles/.git/hooks/pre-commit"]="$HOME/Code/dotfiles/lib/hook
 links["$HOME/.shellcheckrc"]="$HOME/Code/dotfiles/.shellcheckrc"
 links["$HOME/.brewfile"]="$HOME/Code/dotfiles/.brewfile"
 links["$HOME/.brewfile.lock.json"]="$HOME/Code/dotfiles/.brewfile.lock.json"
+links["$HOME/.ruby-version"]="$HOME/Code/dotfiles/.ruby-version"
 
 for link in "${!links[@]}"; do
   lpath="${links[$link]}"
