@@ -12,6 +12,8 @@ Previous scripts and snippets I've used can be found in ~GRAVEYARD.org~.
 * Resources
 Here are some resources that I reference while working on my dotfiles:
 
+- General
+  - https://dotfiles.github.io/
 - Shell
   - https://www.shellcheck.net
   - https://www.shellscript.sh/
@@ -24,7 +26,9 @@ Here are some resources that I reference while working on my dotfiles:
   - https://mywiki.wooledge.org/BashGuide
     - Here's an updated version of the above: https://guide.bash.academy/
   - https://www.gnu.org/software/bash/manual/bash.html
-
+- MacOS
+  - ~man defaults~
+  - https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 ** Template related resources
 These are resources that I reference in the ~lib/project_templates~ folder.
 
@@ -90,3 +94,8 @@ I switch around with different editors often, using ~.editorconfig~ would make t
 ** Switch to full Brewfile support
 
 I have a ~.brewfile~, but I want to update my install script to use it (if on mac), and I want to put my ~.brewfile.lock~ under version control.
+* To Dos
+** TODO Add scripts to set up Ice
+https://github.com/jordanbaird/Ice
+** TODO Add scripts to set up SwiftBar
+https://github.com/swiftbar/SwiftBar
