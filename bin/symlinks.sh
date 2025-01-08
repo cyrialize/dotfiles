@@ -15,6 +15,7 @@ links["$HOME/.shellcheckrc"]="$HOME/Code/dotfiles/.shellcheckrc"
 links["$HOME/.brewfile"]="$HOME/Code/dotfiles/.brewfile"
 links["$HOME/.brewfile.lock.json"]="$HOME/Code/dotfiles/.brewfile.lock.json"
 links["$HOME/.ruby-version"]="$HOME/Code/dotfiles/.ruby-version"
+links["$HOME/.hammerspoon"]="$HOME/Code/dotfiles/.hammerspoon"
 
 for link in "${!links[@]}"; do
   lpath="${links[$link]}"
