@@ -95,6 +95,9 @@ I switch around with different editors often, using ~.editorconfig~ would make t
 
 I have a ~.brewfile~, but I want to update my install script to use it (if on mac), and I want to put my ~.brewfile.lock~ under version control.
 * To Dos
+** TODO Finish setting up brewfile
+** TODO Finish setting up yabai
+** TODO Finish setting up sketchybar
 ** TODO Add scripts to set up Ice
 https://github.com/jordanbaird/Ice
 ** TODO Add scripts to set up SwiftBar
