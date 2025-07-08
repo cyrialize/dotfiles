@@ -22,7 +22,19 @@ echo
 
 # shellcheck disable=SC2154
 print_color "yellow" "Installing/Updating ${#libs[@]} libs applications"
+os=$(current_os)
 for lib in "${libs[@]}"; do
+
+    if [[ "$os" == "mac" ]]; then
+	print_color "yellow" "MacOS detected! It is recommended to use brewfile instead. Proceed? (y/n):"
+
+	read -r answer
+	if [[ "$answer" == "n" || "$answer" != "y" ]]; then
+	    print_color "yellow" "Exiting!"
+	    exit
+	fi
+    fi
+
     if is_installed "$lib"; then
         if is_up_to_date "$lib"; then
             current_version=$(version "$lib")
