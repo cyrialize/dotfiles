@@ -1,0 +1,3 @@
+# "o" is used because it reminds me of "Ctrl-x o" in Emacs
+cmd + alt - o : yabai -m window --focus next 2>/dev/null || yabai -m window --focus prev 2>/dev/null
+cmd + alt - w : open -na /Applications/WezTerm.app
