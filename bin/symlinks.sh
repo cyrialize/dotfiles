@@ -43,6 +43,11 @@ links["$HOME/.yabairc"]="$HOME/Code/dotfiles/.yabairc"
 # Simple hotkey daemon for MacOS: https://github.com/koekeishiya/skhd
 links["$HOME/.skhdrc"]="$HOME/Code/dotfiles/.skhdrc"
 
+# Launchd profiles
+#
+# Startup for skhd
+links["$HOME/Library/LaunchAgents/"]="$HOME/Code/dotfiles/lib/launchd/com.cyr.skhd.plist"
+
 for link in "${!links[@]}"; do
   lpath="${links[$link]}"
 

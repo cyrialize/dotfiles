@@ -1,3 +1,7 @@
 # "o" is used because it reminds me of "Ctrl-x o" in Emacs
-cmd + alt - o : yabai -m window --focus next 2>/dev/null || yabai -m window --focus prev 2>/dev/null
+# Approach from: https://github.com/koekeishiya/yabai/issues/85
+cmd + alt - o : yabai -m window --focus next || yabai -m window --focus first
+cmd + alt - n : yabai -m window --focus next
+cmd + alt - p : yabai -m window --focus prev
 cmd + alt - w : open -na /Applications/WezTerm.app
+cmd + alt - e : open -na /Applications/Emacs.app

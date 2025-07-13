@@ -29,6 +29,8 @@ Here are some resources that I reference while working on my dotfiles:
 - MacOS
   - ~man defaults~
   - https://github.com/mathiasbynens/dotfiles/blob/master/.macos
+  - ~launchd~: the MacOS open source framework for managing daemons
+    - https://launchd.info/
 ** Template related resources
 These are resources that I reference in the ~lib/project_templates~ folder.
 
