@@ -9,6 +9,11 @@ cmd + alt - f : yabai -m window --toggle zoom-fullscreen
 cmd + alt - n : yabai -m window --focus next
 cmd + alt - p : yabai -m window --focus prev
 
+cmd + alt - up : yabai -m window --swap north
+cmd + alt - down : yabai -m window --swap south
+cmd + alt - left : yabai -m window --swap east
+cmd + alt - right : yabai -m window --swap west
+
 # Key codes found using skhd --observe
 
 # minus sign

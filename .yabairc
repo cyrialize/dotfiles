@@ -1,10 +1,10 @@
 yabai -m config layout bsp
 
-yabai -m config top_padding    10
-yabai -m config bottom_padding 10
-yabai -m config left_padding   10
-yabai -m config right_padding  10
-yabai -m config window_gap     0
+yabai -m config top_padding    5
+yabai -m config bottom_padding 5
+yabai -m config left_padding   5
+yabai -m config right_padding  5
+yabai -m config window_gap     5
 
 yabai -m config debug_output on
 
@@ -15,3 +15,4 @@ function yabai_rule {
 }
 
 yabai_rule app="Emacs" manage=on
+yabai_rule app="^System Settings$" manage=off
