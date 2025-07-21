@@ -11,8 +11,8 @@ cmd + alt - p : yabai -m window --focus prev
 
 cmd + alt - up : yabai -m window --swap north
 cmd + alt - down : yabai -m window --swap south
-cmd + alt - left : yabai -m window --swap east
-cmd + alt - right : yabai -m window --swap west
+cmd + alt - left : yabai -m window --swap west
+cmd + alt - right : yabai -m window --swap east
 
 # Key codes found using skhd --observe
 
