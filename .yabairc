@@ -1,11 +1,5 @@
 yabai -m config layout bsp
 
-yabai -m config top_padding    5
-yabai -m config bottom_padding 5
-yabai -m config left_padding   5
-yabai -m config right_padding  5
-yabai -m config window_gap     5
-
 yabai -m config debug_output on
 
 # From here: https://github.com/koekeishiya/yabai/issues/2199#issuecomment-2031528636
@@ -16,3 +10,4 @@ function yabai_rule {
 
 yabai_rule app="Emacs" manage=on
 yabai_rule app="^System Settings$" manage=off
+yabai_rule app="^1 Password$" manage=off
