@@ -6,7 +6,6 @@
 # Approach from: https://github.com/koekeishiya/yabai/issues/85
 cmd + alt - o : yabai -m window --focus next || yabai -m window --focus first
 cmd + alt - f : yabai -m window --toggle zoom-fullscreen
-cmd + alt - r : yabai --restart-service && skhd --restart-service
 cmd + alt - n : yabai -m window --focus next
 cmd + alt - p : yabai -m window --focus prev
 
