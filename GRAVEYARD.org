@@ -1,11 +1,11 @@
-* Graveyard
+* About
 Here are a collection of scripts and snippets that used to be part of my files. I couldn't think of a good place to put them.
 
 I didn't want to have a separate file I wouldn't use, nor a configuration file with flags.
 
 So here they are!
 
-** Base16 Shell
+* Base16 Shell
 
 This was my previous set up for a theme, using https://github.com/chriskempson/base16-shell.
 
@@ -35,4 +35,57 @@ else
     git_attempt_update "$HOME/.config/base16-shell"
 fi
 echo
+#+END_SRC
+
+* Yabai
+
+I previously used Yabai for window management: https://github.com/koekeishiya/yabai.
+
+I prefer Rectangle instead: https://github.com/rxhanson/Rectangle.
+
+This was my old ~.yabairc~:
+#+BEGIN_SRC sh
+yabai -m config layout bsp
+
+yabai -m config debug_output on
+
+# From here: https://github.com/koekeishiya/yabai/issues/2199#issuecomment-2031528636
+function yabai_rule {
+  yabai -m rule --add "$@"
+  yabai -m rule --apply "$@"
+}
+
+yabai_rule app="Emacs" manage=on
+yabai_rule app="^System Settings$" manage=off
+yabai_rule app="^1 Password$" manage=off
+#+END_SRC
+
+These were commands I used to have in my ~.skhdrc~:
+#+BEGIN_SRC sh
+# yabai_*.*.log
+
+# "o" is used because it reminds me of "Ctrl-x o" in Emacs
+# Approach from: https://github.com/koekeishiya/yabai/issues/85
+cmd + alt - o : yabai -m window --focus next || yabai -m window --focus first
+cmd + alt - f : yabai -m window --toggle zoom-fullscreen
+cmd + alt - n : yabai -m window --focus next
+cmd + alt - p : yabai -m window --focus prev
+
+cmd + alt - up : yabai -m window --swap north
+cmd + alt - down : yabai -m window --swap south
+cmd + alt - left : yabai -m window --swap west
+cmd + alt - right : yabai -m window --swap east
+
+# Key codes found using skhd --observe
+
+# minus sign
+cmd + alt - 0x1B : yabai -m window --minimize
+
+# equals sign
+cmd + alt - 0x18 : yabai -m window --deminimize
+#+END_SRC
+
+And this is what I used to have in my ~bin/symlinks.sh~:
+#+BEGIN_SRC sh
+
 #+END_SRC

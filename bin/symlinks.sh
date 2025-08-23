@@ -37,9 +37,6 @@ links["$HOME/.ruby-version"]="$HOME/Code/dotfiles/.ruby-version"
 # Hammerspoon: https://github.com/Hammerspoon/hammerspoon
 links["$HOME/.hammerspoon"]="$HOME/Code/dotfiles/.hammerspoon"
 
-# Yabai: https://github.com/koekeishiya/yabai
-links["$HOME/.yabairc"]="$HOME/Code/dotfiles/.yabairc"
-
 # Simple hotkey daemon for MacOS: https://github.com/koekeishiya/skhd
 links["$HOME/.skhdrc"]="$HOME/Code/dotfiles/.skhdrc"
 
