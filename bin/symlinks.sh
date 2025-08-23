@@ -40,6 +40,9 @@ links["$HOME/.hammerspoon"]="$HOME/Code/dotfiles/.hammerspoon"
 # Simple hotkey daemon for MacOS: https://github.com/koekeishiya/skhd
 links["$HOME/.skhdrc"]="$HOME/Code/dotfiles/.skhdrc"
 
+# Window management app for MacOS: https://github.com/rxhanson/Rectangle
+links["$HOME/Library/Application Support/Rectangle/RectangleConfig.json"]="$HOME/Code/dotfiles/RectangleConfig.json"
+
 # Launchd profiles
 #
 # Startup for skhd
