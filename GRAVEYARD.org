@@ -87,5 +87,6 @@ cmd + alt - 0x18 : yabai -m window --deminimize
 
 And this is what I used to have in my ~bin/symlinks.sh~:
 #+BEGIN_SRC sh
-
+# Yabai: https://github.com/koekeishiya/yabai
+links["$HOME/.yabairc"]="$HOME/Code/dotfiles/.yabairc"
 #+END_SRC
