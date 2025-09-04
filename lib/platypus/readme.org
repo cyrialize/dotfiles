@@ -1,0 +1,3 @@
+* README
+
+Various scripts, images, etc. used for https://github.com/sveinbjornt/Platypus.
