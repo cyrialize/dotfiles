@@ -43,6 +43,11 @@ links["$HOME/.skhdrc"]="$HOME/Code/dotfiles/.skhdrc"
 # Window management app for MacOS: https://github.com/rxhanson/Rectangle
 links["$HOME/Library/Application Support/Rectangle/RectangleConfig.json"]="$HOME/Code/dotfiles/RectangleConfig.json"
 
+# For using beorg with iCloud - I find this syncing is better than choosing a
+# folder on iCloud that beorg checks
+# See: https://www.beorgapp.com/support/icloudsymlinks/
+links["$HOME/Documents/org"]="$HOME/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents"
+
 # Launchd profiles
 #
 # Startup for skhd

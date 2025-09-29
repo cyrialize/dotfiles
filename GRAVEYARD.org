@@ -90,3 +90,49 @@ And this is what I used to have in my ~bin/symlinks.sh~:
 # Yabai: https://github.com/koekeishiya/yabai
 links["$HOME/.yabairc"]="$HOME/Code/dotfiles/.yabairc"
 #+END_SRC
+
+I also had the following setup in my ~init.el~. Yabai sometimes was unable to recognize Emacs as a window. Adding in the toolbar helped out. I didn't really use the toolbar though, so I would hide it after setup.
+#+BEGIN_SRC elisp
+(use-package emacs
+  :custom
+  (scroll-bar-mode nil)
+  ;; tool-bar-mode used to be nil here, instead we turn it on so that Emacs
+  ;; could correctly be recognized by Yabai. We turn it off after startup -
+  ;; see :hook below.
+  ;;
+  ;; Idea for this setup from:
+  ;; https://github.com/koekeishiya/yabai/issues/86
+  (tool-bar-mode t)
+
+  (mode-require-final-newline 'visit-save)
+  (require-final-newline 'visit-save)
+
+  (tooltip-mode nil)
+  (tooltip-use-echo-area t)
+  (tooltip-resize-echo-area t)
+
+  (display-fill-column-indicator t)
+  (display-fill-column-indicator-column 80)
+
+  (sentence-end-double-space nil)
+
+  (whitepsace-line-column 80)
+
+  :init
+  ;; Ask y or n instead of yes or no
+  (fset 'yes-or-no-p 'y-or-n-p)
+
+  :hook
+  ((emacs-startup . (lambda () (cyr-load-custom "~/.emacs.d/custom.el")))
+   (emacs-startup . cyr-load-private)
+   (emacs-startup . cyr-exec-path-from-shell)
+   ;; Turn the tool bar off. Yabai continues to recognize Emacs after, it is
+   ;; only needed at startup.
+   (emacs-startup . (lambda () (sleep-for 0.5) (tool-bar-mode -1)))
+   (after-init . tab-bar-mode)
+   (after-init . global-hl-line-mode)
+   (after-init . nerd-icons-completion-mode)
+   (after-init . column-number-mode)
+   (prog-mode . display-line-numbers-mode)
+   (prog-mode . display-fill-column-indicator-mode)))
+#+END_SRC
