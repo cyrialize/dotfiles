@@ -23,6 +23,12 @@ export HOMEBREW_BUNDLE_FILE_GLOBAL=$HOME/.brewfile
 # solargraph (ruby LSP)
 export PATH=$HOME/.gem/ruby/3.4.1/bin/solargraph:$PATH
 
+# rust cargo
+source $HOME/.cargo/env
+
+# rust-analyzer (rust LSP)
+export PATH=$HOME/.rust-analyzer/rust-analyzer:$PATH
+
 # Run on terminal startup:
 
 fortune | cowsay -f small
